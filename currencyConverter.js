@@ -1,13 +1,24 @@
 // converting in usd
-let npr = document.getElementById("currencyInput").value;
-npr = Number(npr);
-console.log(npr);
 
 function inUSD() {
-  usd = npr / 113;
+  let usd = dpr / 126;
   return usd;
 }
 
+function inINR() {
+  let inr = dpr / 1.6;
+  return inr;
+}
+
 document.getElementById("submitBtn").onclick = function convert() {
-  document.getElementById("inUSD").innerHTML = inUSD();
+  let npr = document.getElementById("currencyInput").value;
+  dpr = Number(npr);
+  document.getElementById("inUSD").innerHTML = inUSD().toLocaleString("en-US", {
+    style: "currency",
+    currency: "usd",
+  });
+  document.getElementById("inINR").innerHTML = inINR().toLocaleString("hi-IN", {
+    style: "currency",
+    currency: "inr",
+  });
 };
