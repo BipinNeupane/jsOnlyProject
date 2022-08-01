@@ -30,8 +30,10 @@ function updoot() {
         minutes = inputZero(minutes);
         seconds = inputZero(seconds);
         
+        let AmOrPM = hours>=12 ? "pm" : "am"
+        hours = hours>=12?hours%12:hours;
 
-    return `${hours}:${minutes}:${seconds}`;
+    return `${hours}:${minutes}:${seconds} ${AmOrPM}`;
   }
     function inputZero(time){
          time = time.toString();
