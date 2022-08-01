@@ -30,6 +30,9 @@ function updoot() {
         minutes = inputZero(minutes);
         seconds = inputZero(seconds);
 
+        // converting military time to standard time
+        hours >= 12 ? hours-12 : hours;
+
     return `${hours}:${minutes}:${seconds}`;
   }
     function inputZero(time){
