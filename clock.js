@@ -30,7 +30,10 @@ function updoot() {
         minutes = inputZero(minutes);
         seconds = inputZero(seconds);
         
-        let AmOrPM = hours>=12 ? "pm" : "am"
+        //am/pm notation 
+        let AmOrPM = hours>=12 ? "pm" : "am";
+
+        // converting into military time
         hours = hours>=12?hours%12:hours;
 
     return `${hours}:${minutes}:${seconds} ${AmOrPM}`;
