@@ -22,16 +22,14 @@ function updoot() {
 
   //   creating nested function to format the clock
     function formatClock(date) {
-        let hours = date.getHours();
+        let hours = date.getHours(); 
         let minutes = date.getMinutes();
         let seconds = date.getSeconds();
 
         hours = inputZero(hours);
         minutes = inputZero(minutes);
         seconds = inputZero(seconds);
-
-        // converting military time to standard time
-        hours >= 12 ? hours-12 : hours;
+        
 
     return `${hours}:${minutes}:${seconds}`;
   }
@@ -40,4 +38,5 @@ function updoot() {
 
          return time.length < 2 ? "0" + time : time;
     }
+
 }
