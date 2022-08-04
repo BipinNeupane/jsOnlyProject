@@ -1,7 +1,10 @@
 let canvas = document.querySelector("#myCanvas");
 let context = canvas.getContext("2d");
 
+
+
 context.beginPath();
+context.fillStyle = "red"
 context.rect(40, 90, 60, 60);//square
 context.rect(60, 60, 60, 60);//back square
 // connecting lines
